@@ -26,9 +26,7 @@ FROM builder as apache-spark
 
 WORKDIR /opt/spark/mil
 # Download your data file inside the 'data' directory
-RUN wget https://s3.console.aws.amazon.com/s3/object/movilensdata?region=us-east-2&bucketType=general&prefix=ratings20.csv 
-
-RUN wget https://s3.console.aws.amazon.com/s3/object/movilensdata?region=us-east-2&bucketType=general&prefix=ratings25.csv
+RUN wget https://movilensdata.s3.us-east-2.amazonaws.com/rating_files.zip 
 
 WORKDIR /opt/spark
 

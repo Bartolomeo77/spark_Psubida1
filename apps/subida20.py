@@ -18,7 +18,7 @@ def main():
       "password": "casa1234",
       "driver": "org.postgresql.Driver"
     }
-    file = "/opt/spark-data/ratings25.csv"
+    file = "/opt/spark-data/ratings20.csv"
     sql,sc = init_spark()
 
     df = sql.read.load(file, format="csv", inferSchema="true", header=True)  \
